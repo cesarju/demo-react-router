@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Route, Routes}  from 'react-router-dom'
+import {Gatos} from './components/Gatos'
+import {Perros} from './components/Perros'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>      
+        <Route path="gatos" element={<Gatos/>}/>
+        <Route path="perros" element={<Perros/>}/>
+      </Route>
+
+    </Routes>
+
+    
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
