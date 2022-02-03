@@ -15,9 +15,9 @@ ReactDOM.render(
 
       <Route path='/' element={<App />}>
         <Route path='dogs' element={<Dogs/>}/>
-        <Route path='cats' element={<Cats/>}/>
+        <Route path='cats' element={<Cats/>}/>  
       </Route>
-
+      <Route path="*" element={<h1>ERROR 404</h1>}/>
     </Routes>   
   </BrowserRouter>,
   document.getElementById('root')
